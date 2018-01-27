@@ -28,7 +28,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-light bg-light static-top">
       <div class="container">
-        <a class="navbar-brand" href="index.html" style="text-align: center; margin-left: 46%;">Open Movie DataBase</a>
+        <a class="navbar-brand" href="index.html" style="text-align: center; margin-left: 45%;">Open Movie DataBase</a>
       </div>
     </nav>
 
@@ -43,10 +43,14 @@
           <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
             <form>
               <div class="form-row">
+                <div class="col-12 col-md-1">
+                  <div class="fa fa-microphone fa-2x fa-fw" style="display:block; padding:8px" id="speechButton" onclick="startDictation(event)" ></div>
+                  <!-- <input type="button" class="btn btn-block btn-lg btn-primary" id="speechButton" onclick="startDictation(event)" value="Dictate!"> -->
+                </div>
                 <div class="col-12 col-md-9 mb-2 mb-md-0">
                   <input type="text" class="form-control form-control-lg" id="inputMovieName" placeholder="Enter a movie's name...">
                 </div>
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-md-2">
                   <input type="button" class="btn btn-block btn-lg btn-primary" id="searchButton" value="Search!">
                 </div>
               </div>
@@ -225,7 +229,10 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Movie Search based Javascript -->
-    <script src="/js/search.js"></script>
+    <script src="/js/searchMovie.js"></script>
+
+    <!-- Speech Support based Javascript -->
+    <script src="/js/speechSupport.js"></script>
 
   </body>
 

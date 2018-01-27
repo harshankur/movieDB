@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-
-<div>
-  <a href="#" id="start_button" onclick="startDictation(event)">Dictate</a>
-</div>
-
-<div id="results">
-  <span id="final_span" class="final"></span>
-  <span id="interim_span" class="interim"></span>
-</div>
-
-<script type="text/javascript">
 var final_transcript = '';
 var recognizing = false;
 
@@ -45,8 +30,7 @@ if ('webkitSpeechRecognition' in window) {
       }
     }
     final_transcript = capitalize(final_transcript);
-    final_span.innerHTML = linebreak(final_transcript);
-    interim_span.innerHTML = linebreak(interim_transcript);
+    inputMovieName.value = linebreak(final_transcript);
     
   };
 }
@@ -69,10 +53,5 @@ function startDictation(event) {
   final_transcript = '';
   recognition.lang = 'en-US';
   recognition.start();
-  final_span.innerHTML = '';
-  interim_span.innerHTML = '';
+  inputMovieName.value = '';
 }
-</script>
-
-</body>
-</html>
