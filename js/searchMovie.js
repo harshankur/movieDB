@@ -40,6 +40,8 @@ function searchMovieDetailsWithVoice(speechMovieName) {
     //Checking if Search button is working or not
     console.log("Beginning Search now");
 
+    document.getElementById("inputMovieName").value = speechMovieName;
+
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", myQueryUrl + speechMovieName, true); // true for asynchronous 
     xmlHttp.send("{}");

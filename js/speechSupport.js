@@ -37,7 +37,7 @@ if ('webkitSpeechRecognition' in window) {
     inputMovieName.value = linebreak(final_transcript);
 
     //Search Command from the text inside Movie Name field
-
+    /*
     recognition.stop();   //Stop recording once there is text inside the search Bar
     setTimeout(() => {
       if (inputMovieName.value != "") {
@@ -45,7 +45,7 @@ if ('webkitSpeechRecognition' in window) {
         inputMovieName.value = '';
       }
     }, 2000);
-    
+    */
   };
 }
 
