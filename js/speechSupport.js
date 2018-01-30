@@ -1,3 +1,7 @@
+//This file is not to be used as Annyang Speech js file performs faster and better
+
+//This is the speech component of movieDB. This contains converting media into text and further using that text to search for movie.
+
 var final_transcript = '';
 var recognizing = false;
 
@@ -31,6 +35,16 @@ if ('webkitSpeechRecognition' in window) {
     }
     final_transcript = capitalize(final_transcript);
     inputMovieName.value = linebreak(final_transcript);
+
+    //Search Command from the text inside Movie Name field
+
+    recognition.stop();   //Stop recording once there is text inside the search Bar
+    setTimeout(() => {
+      if (inputMovieName.value != "") {
+        document.getElementById("searchButton").click();
+        inputMovieName.value = '';
+      }
+    }, 2000);
     
   };
 }

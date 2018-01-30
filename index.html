@@ -46,7 +46,7 @@
             <form>
               <div class="form-row">
                 <div class="col-12 col-md-1">
-                  <div class="fa fa-microphone fa-2x fa-fw" style="display:block; padding:8px" id="speechButton" onclick="startDictation(event)" ></div>
+                  <div class="fa fa-microphone fa-2x fa-fw" style="display:block; padding:8px" id="speechButton" ></div>
                   <!-- <input type="button" class="btn btn-block btn-lg btn-primary" id="speechButton" onclick="startDictation(event)" value="Dictate!"> -->
                 </div>
                 <div class="col-12 col-md-9 mb-2 mb-md-0">
@@ -235,6 +235,10 @@
 
     <!-- Speech Support based Javascript -->
     <script src="/js/speechSupport.js"></script>
+
+    <!-- Including Annyang Speech Support Library -->
+    <script src="js/annyang_core.min.js"></script>
+    <script src="js/annyangSpeech.js"></script>
 
   </body>
 
