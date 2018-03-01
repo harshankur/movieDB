@@ -18,43 +18,18 @@ function searchMovieDetails() {
     console.log("Beginning Search now");
 
     var myMovieName = document.getElementById("inputMovieName").value;
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", myQueryUrl + myMovieName, true); // true for asynchronous 
-    xmlHttp.send("{}");
-    xmlHttp.onreadystatechange = function () {
-        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-            var myResponse = JSON.parse(xmlHttp.responseText);
-
-            var myResults = myResponse.results;
-            var myFirstResult = myResults[0];
-            var myOverview = myFirstResult.overview;
-            
-            console.log("The story of this piece is: " + myOverview);
-            alert("The story of this piece is: " + myOverview);
-        }
-    };
+    fetch(myQueryUrl+myMovieName)
+    .then(function (response) {
+        return response.json();
+    }).then(function(data) {
+        alert("The story of this movie is: " + data.results[0].overview);
+    });
 }
 
 //Search Movie Details with voice
 function searchMovieDetailsWithVoice(speechMovieName) {
     //Checking if Search button is working or not
-    console.log("Beginning Search now");
-
+    console.log("Voice Search called");
     document.getElementById("inputMovieName").value = speechMovieName;
-
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", myQueryUrl + speechMovieName, true); // true for asynchronous 
-    xmlHttp.send("{}");
-    xmlHttp.onreadystatechange = function () {
-        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-            var myResponse = JSON.parse(xmlHttp.responseText);
-
-            var myResults = myResponse.results;
-            var myFirstResult = myResults[0];
-            var myOverview = myFirstResult.overview;
-
-            console.log("The story of this piece is: " + myOverview);
-            alert("The story of this piece is: " + myOverview);
-        }
-    };
+    searchMovieDetails();
 }
