@@ -17,6 +17,16 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- JQuery-UI CSS -->
+    <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+
+    <style>
+    .ui-autocomplete-loading {
+      background: white url("images/ui-anim_basic_16x16.gif") right center no-repeat;
+    }
+    </style>
+
+
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
@@ -42,13 +52,13 @@
       <div class="container">
         <div class="row">
           <div class="col-xl-9 mx-auto">
-            <h1 class="mb-5">Search for any movie that you please. Just enter any name you remember in the box below!</h1>
+            <h1 class="mb-5">Say 'Search For' and speak the name of a movie. Check results in console.</h1>
           </div>
           <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
             <form>
               <div class="form-row">
                 <div class="col-12 col-md-1">
-                  <img class="fa fa-2x fa-fw" style="display:block; padding:1px; margin:2px" src="img/mic_off.png" id="speechButton" >
+                  <img class="fa fa-2x fa-fw" style="display:block; padding:1px; margin:2px" src="img/mic_on.png" id="speechButton" >
                   <!-- <input type="button" class="btn btn-block btn-lg btn-primary" id="speechButton" onclick="startDictation(event)" value="Dictate!"> -->
                 </div>
                 <div class="col-12 col-md-9 mb-2 mb-md-0">
@@ -231,6 +241,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
 
     <!-- Movie Search based Javascript -->
     <script src="/js/searchMovie.js"></script>
